@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PNGTuberManager", "WpfApp1\PNGTuberManager.csproj", "{7B80D131-E145-4C29-8D98-9359F8E10DF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B80D131-E145-4C29-8D98-9359F8E10DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B80D131-E145-4C29-8D98-9359F8E10DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B80D131-E145-4C29-8D98-9359F8E10DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B80D131-E145-4C29-8D98-9359F8E10DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6BE35FF-8824-4A51-B3D0-1572E0C15C71}
+	EndGlobalSection
+EndGlobal
