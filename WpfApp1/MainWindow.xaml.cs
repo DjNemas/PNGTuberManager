@@ -334,11 +334,7 @@ namespace PNGTuberManager
 
         private void BTN_DeleteIdle_Click(object sender, RoutedEventArgs e)
         {
-            if(LB_IdleListBox.SelectedItem is not null)
-            {
-                var image = (CustomImages)LB_IdleListBox.SelectedItem;
-                IdleImages.Remove(image);
-            }
+            RemoveImage(LB_IdleListBox, IdleImages);
         }
 
         private void BTN_AddPen_Click(object sender, RoutedEventArgs e)
@@ -348,7 +344,7 @@ namespace PNGTuberManager
 
         private void BTN_DeletePen_Click(object sender, RoutedEventArgs e)
         {
-
+            RemoveImage(LB_PenListBox, PenImages);
         }
 
         private void BTN_AddSpeak_Click(object sender, RoutedEventArgs e)
@@ -358,7 +354,7 @@ namespace PNGTuberManager
 
         private void BTN_DeleteSpeak_Click(object sender, RoutedEventArgs e)
         {
-
+            RemoveImage(LB_SpeakListBox, SpeakImages);
         }
 
         private void AddImage(ObservableCollection<CustomImages> list)
@@ -392,9 +388,13 @@ namespace PNGTuberManager
             }
         }
 
-        private void RemoveImage()
+        private void RemoveImage(ListBox lb, ObservableCollection<CustomImages> list)
         {
-
+            if (lb.SelectedItem is not null)
+            {
+                var image = (CustomImages)lb.SelectedItem;
+                list.Remove(image);
+            }
         }
 
 
@@ -440,12 +440,14 @@ namespace PNGTuberManager
 
         private void LB_PenListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if (((ListBox)e.Source).SelectedItem == null)
+                BTN_DeletePen.IsEnabled = false;
         }
 
         private void LB_SpeakListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if (((ListBox)e.Source).SelectedItem == null)
+                BTN_DeleteSpeak.IsEnabled = false;
         }
         #endregion
     }
